@@ -1,4 +1,29 @@
-.index {
-  flex-direction: column;
-  width: 100%;
+.Index {
+    background-color: #2b2a2a;
+    padding: 0 20px;
+    .list {
+        box-sizing: border-box;
+        margin-top: 20px;
+        .title {
+            font-size: 28px;
+            line-height: 40px;
+            color: #ffd880;
+        }
+        .score {
+            font-size: 28px;
+            line-height: 30px;
+            color: #ffd880;
+        }
+    }
+    .input {
+        box-sizing: border-box;
+        width: 100%;
+        height: 200px;
+        border-width: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: transparent;
+        color: white;
+        margin-top: 20px;
+    }
 }
