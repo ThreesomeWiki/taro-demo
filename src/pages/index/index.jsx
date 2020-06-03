@@ -1,5 +1,17 @@
 import Taro, { Component, Events } from '@tarojs/taro';
-import { View, Button, Text, Image, Video, WebView, Input, Slider, Textarea } from '@tarojs/components';
+import {
+    View,
+    Button,
+    Text,
+    Image,
+    Video,
+    SwiperItem,
+    WebView,
+    Input,
+    Slider,
+    Textarea,
+    Swiper,
+} from '@tarojs/components';
 import { connect } from '@tarojs/redux';
 import { add, minus, asyncAdd } from '../../actions/counter';
 import './index.scss';
@@ -18,25 +30,55 @@ class Index extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: [{ age: 1 }, { age: 2 }, { age: 3 }],
+            hidden: false,
+            data: [
+                {
+                    title: '《少妇白洁的故事》连载第九章',
+                    score: 7,
+                },
+                {
+                    title: '《少妇白洁的故事》连载第八章',
+                    score: 9,
+                },
+            ],
         };
     }
 
     componentDidMount() {}
 
+    componentWillUnmount() {
+        console.log('will unmounted');
+    }
+
     render() {
-        const data = [
-            {
-                title: '《少妇白洁的故事》连载第九章',
-                score: 7,
-            },
-            {
-                title: '《少妇白洁的故事》连载第八章',
-                score: 9,
-            },
-        ];
+        const { data, hidden } = this.state;
         return (
-            <View className="Index">
+            <View
+                className={`Index ${hidden ? 'hidden' : ''}`}
+                onClick={() => {
+                    console.log(123);
+                    this.setState({ hidden: true });
+                }}
+            >
+                <Swiper
+                    className="test-h"
+                    indicatorColor="#999"
+                    indicatorActiveColor="#333"
+                    vertical={false}
+                    circular
+                    indicatorDots
+                    autoplay
+                >
+                    <SwiperItem>
+                        <View className="demo-text-1">1</View>
+                    </SwiperItem>
+                    <SwiperItem>
+                        <View className="demo-text-1">2</View>
+                    </SwiperItem>
+                    <SwiperItem>
+                        <View className="demo-text-1">3</View>
+                    </SwiperItem>
+                </Swiper>
                 {data.map(v => (
                     <View className="flex-row-between-center list">
                         <Text className="title">{v.title}</Text>
@@ -49,12 +91,15 @@ class Index extends Component {
                 />
                 <Image
                     src="http://www.ais02.com/20181228/20181125_230739_205.jpg"
-                    style={{ width: '100%', height: '100%' }}
+                    style={{ width: '100%' }}
+                    mode="widthFix"
                 />
                 <Image
                     src="http://www.ais02.com/20181228/123asdassdfdsh%20(1).jpg"
-                    style={{ width: '100%', height: '100%' }}
+                    style={{ width: '100%' }}
+                    mode="widthFix"
                 />
+                <View className="bottom"></View>
             </View>
         );
     }

@@ -23,3 +23,7 @@
     @extend .flex-row;
     align-items: center;
 }
+
+.hidden {
+    visibility: hidden;
+}
