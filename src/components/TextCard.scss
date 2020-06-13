@@ -1,0 +1,21 @@
+$active-color: #f2b114;
+.TextCard {
+    box-sizing: border-box;
+    .tag {
+        padding: 20px 40px 0 40px;
+        .tag-name {
+            font-size: 32px;
+            line-height: 32px;
+            font-weight: bold;
+            color: $active-color;
+        }
+    }
+    .list {
+        padding: 20px 40px;
+        border-bottom: 1px solid #ddd;
+        .title {
+            font-size: 26px;
+            line-height: 26px;
+        }
+    }
+}

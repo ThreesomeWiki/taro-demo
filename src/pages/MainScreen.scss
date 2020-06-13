@@ -1,0 +1,30 @@
+@import './home/Home.scss';
+@import './picture/Picture.scss';
+@import './story/Story.scss';
+.MainSceen {
+    flex: 1;
+    z-index: 1;
+    height: 200px;
+    .nav {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: white;
+        height: 100px;
+        border-top: 1px solid #eee;
+        box-sizing: border-box;
+        .item {
+            flex: 1;
+            height: 100%;
+            .text {
+                font-size: 36px;
+                color: #333;
+            }
+            .text-active {
+                font-weight: bold;
+                color: rgba(242, 177, 20, 1);
+            }
+        }
+    }
+}

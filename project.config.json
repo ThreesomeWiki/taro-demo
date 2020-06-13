@@ -1,13 +1,13 @@
 {
-  "miniprogramRoot": "./dist",
-  "projectname": "taro-demo",
-  "description": "",
-  "appid": "touristappid",
-  "setting": {
-    "urlCheck": true,
-    "es6": false,
-    "postcss": false,
-    "minified": false
-  },
-  "compileType": "miniprogram"
+    "appid": "wx781fada7e0c3a2e0",
+    "miniprogramRoot": "./dist",
+    "projectname": "taro-demo",
+    "description": "",
+    "setting": {
+        "urlCheck": true,
+        "es6": false,
+        "postcss": false,
+        "minified": false
+    },
+    "compileType": "miniprogram"
 }

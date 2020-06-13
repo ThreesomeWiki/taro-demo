@@ -1,0 +1,14 @@
+.Home-VideoCard {
+    box-sizing: border-box;
+    .image {
+        width: 100%;
+        min-height: 300px;
+        background-color: rgba(245, 245, 245, 1);
+        display: block;
+        border: 5px;
+    }
+    .title {
+        font-size: 28px;
+        color: rgba(35, 26, 18, 1);
+    }
+}
